@@ -65,3 +65,45 @@ Luego dentro de la carpeta "src", se crean las siguientes carpetas:
 ``` bash
 mkdir config helpers models public routes views
 ```
+
+## Creación del Backend
+Seguidamente comensamos editando el archivo: "index.js". Este codigo se divide en secciones para hacerlo más simple de leer:
+
+* Initializations: donde se inicializa los módulos.
+* Settings: acá estará todas las configuraciones.
+* Middleware: acá estará todas las funciones que serán ejecutadas antes de pasarlas a las rutas.
+* Global variables: se almacenará los datos que deseamos que estén accesibles desde toda la aplicación.
+* Routes: para la definción de las rutas o direcciones "URLs".
+* Static Files: para la definción de los archivos estáticos.
+* Server is listenning: para la inicialización del servidor.
+
+
+```javascript
+const express = require('express'); // se convoca al modulo 'express' de nodejs.
+
+
+// SEC: Initializations
+const app = express(); // express es una función, que devuelve un objeto, el cual se almacena en una variable que se llama app.
+
+
+// SEC: Settings
+app.set('port', process.env.PORT || 3000);
+
+
+// SEC: Middleware
+
+
+// SEC: Global Variables
+
+
+// SEC: Routes
+
+
+// SEC: Static Files
+
+
+// SEC: Server is listenning
+app.listen(app.get('port'), () => {
+    console.log('Server on port: ', app.get('port'));
+});
+```
