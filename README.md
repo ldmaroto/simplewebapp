@@ -113,3 +113,17 @@ Para facilitar el trabajo de desarrollo, sin necesidad de estar reiniciando node
 ```
 npm i nodemon -D
 ```
+
+Por defecto, "nodejs" busca la carpeta de vistas ("views"), en el directorio del proyecto, no obstante como la carpeta de vistas está en el subdirectorio "/src", será necesario indicar a "nodejs" la ubicación del directorio. Para esta tarea se necesitan dos cosas dentro del archivo "index.js":
+
+* Llamar un modulo de nodejs, llamado: PATH
+* Definir la ubicación del directorio de vistas.
+
+```javascript
+const path = require('path'); // Modulo necesario para trabajar rutas de archivos y directorios.
+```
+
+```javascript
+// SEC: Settings
+app.set('views', path.join(__dirname, 'views')); // esta linea define la ubicación de la carpeta "views"
+```
