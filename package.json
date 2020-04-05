@@ -1,0 +1,20 @@
+{
+  "name": "simplewebapp",
+  "version": "1.0.0",
+  "description": "Aplicación WEB Simple, tomado del tutorial FaztWEB.com: https://www.youtube.com/watch?v=-bI0diefasA&t=302s",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ldmaroto/simplewebapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ldmaroto/simplewebapp/issues"
+  },
+  "homepage": "https://github.com/ldmaroto/simplewebapp#readme"
+}
