@@ -41,3 +41,27 @@ Instalar los módulos para nodejs (recordar usar el archivo ".gitignore" si usa 
 ```bash
 npm i express express-handlebars express-session method-override mongoose passport passport-local bcryptjs connect-flash
 ```
+
+Crear un directorio en la carpeta del proyecto llamado "src", el cual tendrá todo el código tanto las vistas del "Frontend", como el código del servidor ("Backend"):
+```bash
+mkdir src
+cd src
+```
+
+A continuación creamos dos archivos de javascript: "index.js" y "database.js". "index.js" es el archivo principal de la aplicación web, necesario para poder correrla. "database.js" es pata tener una conección con la base de datos y será utilizado por "index.js".
+```bash
+touch index.js
+touch database.js
+```
+
+Luego dentro de la carpeta "src", se crean las siguientes carpetas:
+* config: esta carpeta puede almacenar distintos archivos que contengan variables de configuración.
+* helpers: donde se almacenan funciones que el servidor podrá utilizar.
+* models: donde se define como van a lucir los datos que deseamos almacenar dentro de la base de datos.
+* public: donde se almacenan todos los archivos estáticos, por ejemplo: imágenes, fuentes, archivos .CSS, archivos .JS
+* routes: donde se almacenan las "URLs" o rutas del servidor.
+* views: donde se almacenan todas las vistas "HTML" de nuestro navegador.
+
+``` bash
+mkdir config helpers models public routes views
+```
