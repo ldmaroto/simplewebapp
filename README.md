@@ -107,3 +107,9 @@ app.listen(app.get('port'), () => {
     console.log('Server on port: ', app.get('port'));
 });
 ```
+
+Para facilitar el trabajo de desarrollo, sin necesidad de estar reiniciando nodejs, se instalará un modulo adicional, aunque no es necesario para el proyecto:
+
+```
+npm i nodemon -D
+```
