@@ -164,3 +164,21 @@ mkdir layouts
 cd layouts/
 touch main.hbs
 ```
+
+En la sección de "Middleware", se configurará algunas funciones del servidor que luego será de utilidad:
+
+```javascript
+const methodOverride = require('method-override'); // Modulo necesario para formularios.
+const session = require('express-session'); // Modulo necesario para crear sesiones de usuarios.
+```
+
+```javascript
+// SEC: Middleware
+app.use(express.urlencoded({extended: false})); // esta linea es un metodo de express, que permite entender los datos que envía un determinado formulario.
+app.use(methodOverride('_method'));
+app.use(session({
+    secret: 'mysecretapp',
+    resave: true,
+    saveUninitialized: true
+}));
+```
