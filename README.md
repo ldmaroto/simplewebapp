@@ -127,3 +127,40 @@ const path = require('path'); // Modulo necesario para trabajar rutas de archivo
 // SEC: Settings
 app.set('views', path.join(__dirname, 'views')); // esta linea define la ubicación de la carpeta "views"
 ```
+
+Porteriormente se debe configurar el motor de plantillas de express: "express-handlebars".
+Para ello se necesita lo siguiente en el archivo "index.js":
+
+* Llamar el módulo de express, llamado: express-handlebars
+* Configurar el módulo "express-handlebars" en la sección de vistas. 
+
+```javascript
+const exphbs = require('express-handlebars');
+```
+
+```javascript
+// SEC: Settings
+app.engine('.hbs', exphbs({
+    defaultLayout: 'main',
+    layoutsDir: path.join(app.get('views'), 'layouts'),
+    partialsDir: path.join(app.get('views'), 'partials'),
+    extname: '.hbs'
+}));
+app.set('view engine', '.hbs'); // para utilizar el motor de vistas.
+```
+
+Cuando se ejecuta la función 'exphbs()', se le envía un objeto de configuración que tiene las siguientes propiedades:
+
+* defaultLayout: es el nombre del archivo principal, que guarda los elementos comunes de las vistas.
+* layoutsDir: define la ubicación de la carpeta "layout".
+* partialsDir: son vistas reutilizables.
+* extname: extension de los archivos hbs.
+
+Dentro de la carpeta "views", se requiere crear la carpeta "layouts". Dentro de "layouts" se necesita crear el archivo "main.bhs"
+
+```bash
+cd views
+mkdir layouts
+cd layouts/
+touch main.hbs
+```
