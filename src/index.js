@@ -1,6 +1,8 @@
 const express = require('express'); // se convoca al modulo 'express' de nodejs.
 const path = require('path'); // Modulo necesario para trabajar rutas de archivos y directorios.
 const exphbs = require('express-handlebars');
+const methodOverride = require('method-override'); // Modulo necesario para formularios.
+const session = require('express-session'); // Modulo necesario para crear sesiones de usuarios.
 
 // SEC: Initializations
 const app = express(); // express es una función, que devuelve un objeto, el cual se almacena en una variable que se llama app.
@@ -18,7 +20,13 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');
 
 // SEC: Middleware
-
+app.use(express.urlencoded({extended: false})); // esta linea es un metodo de express, que permite entender los datos que envía un determinado formulario.
+app.use(methodOverride('_method'));
+app.use(session({
+    secret: 'mysecretapp',
+    resave: true,
+    saveUninitialized: true
+}));
 
 // SEC: Global Variables
 
