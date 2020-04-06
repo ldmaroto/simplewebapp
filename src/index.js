@@ -6,7 +6,7 @@ const session = require('express-session'); // Modulo necesario para crear sesio
 
 // SEC: Initializations
 const app = express(); // express es una función, que devuelve un objeto, el cual se almacena en una variable que se llama app.
-
+require('./database');
 
 // SEC: Settings
 app.set('port', process.env.PORT || 3000);
