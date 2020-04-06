@@ -1,8 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
+router.get('/notes/add-note', (req, res) => {
+    res.render('notes/add-note');
+});
+
+
 router.get('/notes', (req, res) => {
-    res.send('Notas de la base de datos');
+    res.send('Notes');
 })
 
 module.exports = router;
