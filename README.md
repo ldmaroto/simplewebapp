@@ -182,3 +182,60 @@ app.use(session({
     saveUninitialized: true
 }));
 ```
+
+Terminado las configuraciones básicas, nos enfocaremos en las rutas, que son las "URL's" que van en la carpeta "src/routes". En esta carpeta se creará 3 archivos básicos: 
+
+* index.js: estan las URL's de la página principal
+* notes.js: estan las URL's del servidor para que los usuarios puedan crear o manejar sus notas
+* users.js: estan las URL's donde los usuarios puedan autenticarse.
+
+```bash
+touch index.js
+touch notes.js
+rouch users.js
+```
+
+En la sección de rutas del archivo index.js de la carpeta "./src", se necesita declarar las siguientes sentencias:
+
+```javascript
+// SEC: Routes
+app.use(require('./routes/index'));
+app.use(require('./routes/notes'));
+app.use(require('./routes/users'));
+```
+
+En el archivo "package.json" cambiaremos el atributo "scripts" para utilizar nodemon.
+
+```json
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  }
+```
+De ahora en adelante, para ejecutar "nodemon src/index.js", basta con corre en siguiente comando en la terminal:
+
+```bash
+npm run dev
+```
+
+En cada uno de los archivos ".js" del directorio de rutas, será necesario incluir las siguientes sentencias:
+
+```javascript
+const express = require('express');
+const router = express.Router();
+
+
+module.exports = router;
+```
+
+En el archivo "index.js" de la carpeta rutas, incluya la respuesta a la ruta: "/" y "/about":
+
+```javascript
+router.get('/', (req, res) => {
+    res.send('Index');
+})
+
+router.get('/about', (req, res) => {
+    res.send('About');
+})
+```
