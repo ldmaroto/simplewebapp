@@ -260,3 +260,9 @@ router.get('/notes', (req, res) => {
 })
 ```
 
+En la sección "Static Files" del archivo "index.js" de la carpete "src/", se define la ubicación de la carpeta pública con la siguiente sentencia:
+
+```javascript
+// SEC: Static Files
+app.use(express.static(path.join(__dirname, 'public')));
+```
