@@ -2,9 +2,9 @@
 Aplicación WEB Simple, tomado del tutorial FaztWEB.com: https://www.youtube.com/watch?v=-bI0diefasA&t=302s. Versión: En Desarrollo.
 
 ## Contenido
-* [Lista de módulos.](https://github.com/ldmaroto/simplewebapp#lista-de-m%C3%B3dulos)
-* [Pasos para crear la carpeta del proyecto](https://github.com/ldmaroto/simplewebapp#pasos-para-crear-la-carpeta-del-proyecto)
-* [Creación del Backend.](https://github.com/ldmaroto/simplewebapp#creaci%C3%B3n-del-backend)
+* [I. Lista de módulos.](https://github.com/ldmaroto/simplewebapp#i-lista-de-m%C3%B3dulos)
+* [II. Pasos para crear la carpeta del proyecto](https://github.com/ldmaroto/ii-simplewebapp#pasos-para-crear-la-carpeta-del-proyecto)
+* [III. Creación del Backend.](https://github.com/ldmaroto/simplewebapp#iii-creaci%C3%B3n-del-backend)
 * Desarrollo de Vistas
 * CRUD
 * Funcionalidad: Register
@@ -12,8 +12,8 @@ Aplicación WEB Simple, tomado del tutorial FaztWEB.com: https://www.youtube.com
 * Funcionalidad: Nevigation
 * Funcionalidad: Datos personales
 
-## Lista de módulos.
-Para este proyecto, utilizaremos los siguientes módulos de **"nodejs"**, los cuales será útiles tanto para el **"Frontend"** como para el **"Backend"**:
+## I. Lista de módulos.
+Para este proyecto, utilizaremos los siguientes módulos de **"nodejs"**, los cuales serán útiles tanto para el **"Frontend"** como para el **"Backend"**:
 
 * **express:** es el framework de desarrollo de aplicaciones web minimalista y flexible para nodejs.
 * **express-handlebars:** es un complemento de express, util para integrar un motor de plantillas dentro de express. 
@@ -68,7 +68,7 @@ mkdir config helpers models public routes views
 ```
 
 ## Creación del Backend
-Seguidamente comensamos editando el archivo: "index.js". Este codigo se divide en secciones para hacerlo más simple de leer:
+Comensamos editando el archivo: **"index.js"**. Este archivo se dividirá en secciones para hacerlo más simple de leer:
 
 * **SEC: Initializations:** donde se inicializa los módulos.
 * **SEC: Settings:** acá estará todas las configuraciones.
@@ -78,6 +78,8 @@ Seguidamente comensamos editando el archivo: "index.js". Este codigo se divide e
 * **SEC: Static Files:** para la definción de los archivos estáticos.
 * **SEC: Server is listenning:** para la inicialización del servidor.
 
+### 1. Convocar "Express"
+Crear la sentencia que convoca **"index.js"** al módulo **"express"**:
 
 ```javascript
 const express = require('express'); // se convoca al modulo 'express' de nodejs.
