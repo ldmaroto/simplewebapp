@@ -3,6 +3,8 @@ Aplicación WEB Simple, tomado del tutorial FaztWEB.com. Versión: En Desarrollo
 
 * [Youtube: Nodejs y Mongodb Aplicación completa](https://www.youtube.com/watch?v=-bI0diefasA&t=302s)
 * [Youtube: MongoDB instalación en Windows 10](https://www.youtube.com/watch?v=2KMQdqDk9e8)
+* [Youtube: MongoDB Curso, Introducción Practica a NoSQL](https://www.youtube.com/watch?v=lWMemPN9t6Q&t=2626s)
+* [Bootstrap](https://getbootstrap.com/)
 
 ## Contenido
 * [I. Lista de módulos.](https://github.com/ldmaroto/simplewebapp#i-lista-de-m%C3%B3dulos)
@@ -306,11 +308,11 @@ router.get('/about', (req, res) => {
 En el archivo "users.js" de la carpeta rutas, incluya la respuesta a la ruta: "/users/singin" y "/users/singup":
 
 ```javascript
-router.get('/users/singin', (req, res) => {
+router.get('/users/sing-in', (req, res) => {
     res.send('Ingresando a la app');
 })
 
-router.get('/users/singup', (req, res) => {
+router.get('/users/sing-up', (req, res) => {
     res.send('Formulario de autenticación');
 })
 ```
@@ -408,6 +410,64 @@ Modificaremos la plantilla de "express-handlebars", que anteriormente llamamos: 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SimpleWebApp</title>
     <!-- Enlace CSS desde la CDN de BOOTSTRAP 4 -->
+
+</head>
+
+<body>
+    <p>Barra de Navegación</p>
+
+    <!-- {{{ body }}} Sintaxis de "express-handlebars", contenido de los archivos ".hbs" -->
+    {{{ body }}}
+
+    <p>Footer</p>
+</body>
+
+</html>
+```
+
+
+### 3. Rederizado de los archivos "handlebars" desde la definición de rutas.
+En la carpeta "src/routes/" están definidas las rutas de la aplicación web, mediante los archivos ".js". Por el momento tenemos solo 3 archivos:
+
+* index.js
+* notes.js
+* users.js
+
+En lugar que "express" responda en cada ruta con un texto, modificaremos los archivos ".js" para que "express" devuelva el un ".hbs". Por ejemplo el archivo "index.js" de la carpeta "src/routes/" se modificará así:
+
+```javascript
+const express = require('express');
+const router = express.Router();
+
+router.get('/', (req, res) => {
+    // res.send('Index');
+    res.render('index');
+})
+
+router.get('/about', (req, res) => {
+    // res.send('About');
+    res.render('about')
+})
+
+module.exports = router;
+```
+
+De esta forma, a la hora que el navegador solicite el contenido de una dererminada ruta, "express" devolverá el contenido de un ".hbs".
+
+### 4. Cargando Bootstrap
+
+Para cargar el CSS desde en CDN de Bootstrap, inserte el enlace de referencia en el archivo "main.hbs":
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleWebApp</title>
+    <!-- Enlace CSS desde la CDN de BOOTSTRAP 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 </head>
 
