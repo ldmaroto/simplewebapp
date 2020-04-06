@@ -110,13 +110,14 @@ app.listen(app.get('port'), () => {
     console.log('Server on port: ', app.get('port'));
 });
 ```
-
+### 2. Instalar "nodemon"
 Para facilitar el trabajo de desarrollo, sin necesidad de estar reiniciando nodejs, se instalará un modulo adicional, aunque no es necesario para el proyecto:
 
 ```
 npm i nodemon -D
 ```
 
+### 3. Convocar "path"
 Por defecto, "nodejs" busca la carpeta de vistas ("views"), en el directorio del proyecto, no obstante como la carpeta de vistas está en el subdirectorio "/src", será necesario indicar a "nodejs" la ubicación del directorio. Para esta tarea se necesitan dos cosas dentro del archivo "index.js":
 
 * Llamar un modulo de nodejs, llamado: PATH
@@ -131,7 +132,8 @@ const path = require('path'); // Modulo necesario para trabajar rutas de archivo
 app.set('views', path.join(__dirname, 'views')); // esta linea define la ubicación de la carpeta "views"
 ```
 
-Porteriormente se debe configurar el motor de plantillas de express: "express-handlebars".
+### 4. Convocar "express-handlebars"
+Porteriormente se debe configurar el motor de plantillas de express: **"express-handlebars"**.
 Para ello se necesita lo siguiente en el archivo "index.js":
 
 * Llamar el módulo de express, llamado: express-handlebars
@@ -159,6 +161,8 @@ Cuando se ejecuta la función 'exphbs()', se le envía un objeto de configuraci�
 * partialsDir: son vistas reutilizables.
 * extname: extension de los archivos hbs.
 
+
+### 5. Crear la carpeta "views"
 Dentro de la carpeta "views", se requiere crear la carpeta "layouts". Dentro de "layouts" se necesita crear el archivo "main.bhs"
 
 ```bash
@@ -168,6 +172,7 @@ cd layouts/
 touch main.hbs
 ```
 
+### 6. Convocar "method-override" y "express-session"
 En la sección de "Middleware", se configurará algunas funciones del servidor que luego será de utilidad:
 
 ```javascript
@@ -186,6 +191,7 @@ app.use(session({
 }));
 ```
 
+### 7. Definir la rutas
 Terminado las configuraciones básicas, nos enfocaremos en las rutas, que son las "URL's" que van en la carpeta "src/routes". En esta carpeta se creará 3 archivos básicos: 
 
 * index.js: estan las URL's de la página principal
@@ -207,6 +213,7 @@ app.use(require('./routes/notes'));
 app.use(require('./routes/users'));
 ```
 
+### 8. Configurar "nodemon" para correrlo desde la terminal
 En el archivo "package.json" cambiaremos el atributo "scripts" para utilizar nodemon.
 
 ```json
@@ -215,12 +222,13 @@ En el archivo "package.json" cambiaremos el atributo "scripts" para utilizar nod
     "dev": "nodemon src/index.js"
   }
 ```
-De ahora en adelante, para ejecutar "nodemon src/index.js", basta con corre en siguiente comando en la terminal:
+De ahora en adelante, para ejecutar "nodemon src/index.js", basta con correr en siguiente comando en la terminal:
 
 ```bash
 npm run dev
 ```
 
+### 9. Definir contenido de los archivos ".js" para las rutas
 En cada uno de los archivos ".js" del directorio de rutas, será necesario incluir las siguientes sentencias:
 
 ```javascript
@@ -263,6 +271,7 @@ router.get('/notes', (req, res) => {
 })
 ```
 
+### 10. Definir la ubicación de la carpeta para contenido estático
 En la sección "Static Files" del archivo "index.js" de la carpete "src/", se define la ubicación de la carpeta pública con la siguiente sentencia:
 
 ```javascript
@@ -270,6 +279,7 @@ En la sección "Static Files" del archivo "index.js" de la carpete "src/", se de
 app.use(express.static(path.join(__dirname, 'public')));
 ```
 
+### 11. Conectar "express" con la base de datos de "mongodb"
 Antes de finalizar la configuración del "Backend", seguidamente se prepara la conección entre la aplicación web con la base de datos. Recordar que "mongoose" no es la base de datos, es el módulo que nos permite unir express con una base de datos de "MongoBD". Es necesario instalar el servidor "MongoDB". Puede seguir este tutorial: https://www.youtube.com/watch?v=2KMQdqDk9e8. 
 
 En el archivo "database.js" debe crear las siguientes sentencias:
