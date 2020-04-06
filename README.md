@@ -239,3 +239,24 @@ router.get('/about', (req, res) => {
     res.send('About');
 })
 ```
+
+En el archivo "users.js" de la carpeta rutas, incluya la respuesta a la ruta: "/users/singin" y "/users/singup":
+
+```javascript
+router.get('/users/singin', (req, res) => {
+    res.send('Ingresando a la app');
+})
+
+router.get('/users/singup', (req, res) => {
+    res.send('Formulario de autenticación');
+})
+```
+
+Lo mismo hacemos hacemos para el archivo "notes.js", incluyendo la respuesta a la ruta: "/notes"
+
+```javascript
+router.get('/notes', (req, res) => {
+    res.send('Notas de la base de datos');
+})
+```
+
