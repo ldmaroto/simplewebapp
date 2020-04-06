@@ -10,12 +10,12 @@ Aplicación WEB Simple, tomado del tutorial FaztWEB.com. Versión: En Desarrollo
 * [I. Lista de módulos.](https://github.com/ldmaroto/simplewebapp#i-lista-de-m%C3%B3dulos)
 * [II. Pasos para crear la carpeta del proyecto](https://github.com/ldmaroto/simplewebapp#ii-pasos-para-crear-la-carpeta-del-proyecto)
 * [III. Creación del Backend.](https://github.com/ldmaroto/simplewebapp#iii-creaci%C3%B3n-del-backend)
-* IV. Desarrollo de Vistas
-* CRUD
-* Funcionalidad: Register
-* Funcionalidad: Login
-* Funcionalidad: Nevigation
-* Funcionalidad: Datos personales
+* [IV. Desarrollo de Vistas.](https://github.com/ldmaroto/simplewebapp#iv-desarrollo-de-vistas)
+* V. CRUD
+* VI. Funcionalidad: Register
+* VII. Funcionalidad: Login
+* VIII. Funcionalidad: Nevigation
+* IX. Funcionalidad: Datos personales
 
 ## I. Lista de módulos.
 Para este proyecto, utilizaremos los siguientes módulos de **"nodejs"**, los cuales serán útiles tanto para el **"Frontend"** como para el **"Backend"**:
@@ -514,7 +514,7 @@ Para cargar el CSS desde en CDN de Bootstrap, inserte el enlace de referencia en
  ```
 
  ### 6. Creando estilos CSS personalizados
-En la carpeta "src/public/", se debe crear un carpeta llamada "css" y dentro de ella un archivos llamado "main.css"
+En la carpeta "src/public/", se debe crear un carpeta llamada "css/" y dentro de ella un archivos llamado "main.css"
 
 ```bash
 $ mkdir css
