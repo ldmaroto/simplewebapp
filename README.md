@@ -526,11 +526,11 @@ En el archivo "main.css", escriba el contenido del estilo del body. Puede utiliz
 
 ```css
 body {
-    background: #283048;
+    background: #000428;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #859398, #283048);
+    background: -webkit-linear-gradient(to right, #004e92, #000428);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #859398, #283048);
+    background: linear-gradient(to right, #004e92, #000428);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 ```
