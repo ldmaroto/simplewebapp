@@ -32,7 +32,9 @@ app.use(session({
 
 
 // SEC: Routes
-
+app.use(require('./routes/index'));
+app.use(require('./routes/notes'));
+app.use(require('./routes/users'));
 
 // SEC: Static Files
 
