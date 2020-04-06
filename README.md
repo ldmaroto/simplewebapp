@@ -8,7 +8,7 @@ Aplicación WEB Simple, tomado del tutorial FaztWEB.com. Versión: En Desarrollo
 * [I. Lista de módulos.](https://github.com/ldmaroto/simplewebapp#i-lista-de-m%C3%B3dulos)
 * [II. Pasos para crear la carpeta del proyecto](https://github.com/ldmaroto/simplewebapp#ii-pasos-para-crear-la-carpeta-del-proyecto)
 * [III. Creación del Backend.](https://github.com/ldmaroto/simplewebapp#iii-creaci%C3%B3n-del-backend)
-* Desarrollo de Vistas
+* IV. Desarrollo de Vistas
 * CRUD
 * Funcionalidad: Register
 * Funcionalidad: Login
@@ -359,3 +359,40 @@ En el archivo "index.js", en la sección de inicialización, se requiere inicial
 
 require('./database');
 ```
+
+## IV. Desarrollo de Vistas
+
+### 1. Crear los archivos "handlebars" de las vistas
+Los archivos ".hbs" son el equivalente a los archivos ".html". 
+
+> Ruta (URL)     | Archivo ".hbs" | Ubicación 
+> ---------------|----------------|-----------------
+> /              | index.hbs      | usr/views/
+> /about         | about.hbs      | usr/views/
+> /users/sing-in | sing-in.hbs    | usr/views/users
+> /users/sing-up | sing-up.hbs    | usr/views/users
+
+En el terminal, dentro de la carpeta "views/" vamos a crear los archivos ".hbs"
+
+```bash
+touch index.hbs
+touch about.hbs
+mkdir users
+cd users/
+touch sing-in.hbs
+touch sing-up.hbs
+```
+
+Con el editor de su preferencia, agregue por ahora el siguiente contenido a cada uno de los archivos ".hbs" (recuerde que los archivos "handlebars" son archivos ".html"):
+
+```html
+<h1></h1>
+```
+
+En medio de las etiquetas, coloque el nombre del archivo, por ejemplo para el archivo index.hbs, el contenido será:
+
+```html
+<h1>index.hbs</h1>
+```
+
+### 2. Preparar la plantilla del "express-handlebars"
