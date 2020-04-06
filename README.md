@@ -3,7 +3,7 @@ Aplicación WEB Simple, tomado del tutorial FaztWEB.com: https://www.youtube.com
 
 ## Contenido
 * [I. Lista de módulos.](https://github.com/ldmaroto/simplewebapp#i-lista-de-m%C3%B3dulos)
-* [II. Pasos para crear la carpeta del proyecto](https://github.com/ldmaroto/ii-simplewebapp#pasos-para-crear-la-carpeta-del-proyecto)
+* [II. Pasos para crear la carpeta del proyecto](https://github.com/ldmaroto/simplewebapp#ii-pasos-para-crear-la-carpeta-del-proyecto)
 * [III. Creación del Backend.](https://github.com/ldmaroto/simplewebapp#iii-creaci%C3%B3n-del-backend)
 * Desarrollo de Vistas
 * CRUD
