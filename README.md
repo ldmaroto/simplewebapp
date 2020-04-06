@@ -1,5 +1,8 @@
 # simplewebapp
-Aplicación WEB Simple, tomado del tutorial FaztWEB.com: https://www.youtube.com/watch?v=-bI0diefasA&t=302s. Versión: En Desarrollo.
+Aplicación WEB Simple, tomado del tutorial FaztWEB.com. Versión: En Desarrollo.
+
+* https://www.youtube.com/watch?v=-bI0diefasA&t=302s
+* https://www.youtube.com/watch?v=2KMQdqDk9e8
 
 ## Contenido
 * [I. Lista de módulos.](https://github.com/ldmaroto/simplewebapp#i-lista-de-m%C3%B3dulos)
