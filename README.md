@@ -396,3 +396,29 @@ En medio de las etiquetas, coloque el nombre del archivo, por ejemplo para el ar
 ```
 
 ### 2. Preparar la plantilla del "express-handlebars"
+
+Modificaremos la plantilla de "express-handlebars", que anteriormente llamamos: "main.hbs", el cual se encuentra en el directorio "usr/views/layout/", agregando el siguiente contenido:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleWebApp</title>
+    <!-- Enlace CSS desde la CDN de BOOTSTRAP 4 -->
+
+</head>
+
+<body>
+    <p>Barra de Navegación</p>
+
+    <!-- {{{ body }}} Sintaxis de "express-handlebars", contenido de los archivos ".hbs" -->
+    {{{ body }}}
+
+    <p>Footer</p>
+</body>
+
+</html>
+```
