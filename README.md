@@ -367,12 +367,13 @@ require('./database');
 ### 1. Crear los archivos "handlebars" de las vistas
 Los archivos ".hbs" son el equivalente a los archivos ".html". 
 
-> Ruta (URL)     | Archivo ".hbs" | Ubicación 
-> ---------------|----------------|-----------------
-> /              | index.hbs      | usr/views/
-> /about         | about.hbs      | usr/views/
-> /users/sing-in | sing-in.hbs    | usr/views/users
-> /users/sing-up | sing-up.hbs    | usr/views/users
+> Ruta (URL)      | Archivo ".hbs" | Ubicación 
+> ----------------|----------------|-----------------
+> /               | index.hbs      | usr/views/
+> /about          | about.hbs      | usr/views/
+> /users/sing-in  | sing-in.hbs    | usr/views/users
+> /users/sing-up  | sing-up.hbs    | usr/views/users
+> /notes/add-note | add-note.hbs   | usr/views/notes
 
 En el terminal, dentro de la carpeta "views/" vamos a crear los archivos ".hbs"
 
@@ -383,6 +384,10 @@ mkdir users
 cd users/
 touch sing-in.hbs
 touch sing-up.hbs
+cd ..
+mkdir notes
+cd notes/
+touch add-note.hbs
 ```
 
 Con el editor de su preferencia, agregue por ahora el siguiente contenido a cada uno de los archivos ".hbs" (recuerde que los archivos "handlebars" son archivos ".html"):
@@ -566,3 +571,5 @@ Por último, en el archivo "main.hbs", hay que cargar el estilo personalizado, a
 
 </html>
 ```
+
+## V. CRUD
