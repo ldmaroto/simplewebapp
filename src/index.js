@@ -37,6 +37,7 @@ app.use(require('./routes/notes'));
 app.use(require('./routes/users'));
 
 // SEC: Static Files
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 // SEC: Server is listenning
