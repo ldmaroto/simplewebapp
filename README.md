@@ -27,35 +27,38 @@ Para este proyecto, utilizaremos los siguientes módulos de **"nodejs"**, los cu
 
 ## II. Pasos para crear la carpeta del proyecto
 
-1. Crear en la terminal un directorio, en este caso se llamará **"simplewebapp"**:
+### 1. Crear carpeta del proyecto
+Crear en la terminal un directorio, en este caso se llamará **"simplewebapp"**:
 ```bash
 mkdir simplewebapp
 cd simplewebapp
 ```
 
-2. Seguidamente creamos el proyecto en nodejs en la misma carpeta creada, deberá tener instalado **"nodejs"** y **"npm"**:
+### 2. Inicializar "npm" en la carpeta del proyecto
+Seguidamente creamos el proyecto en nodejs en la misma carpeta creada, deberá tener instalado **"nodejs"** y **"npm"**:
 ```bash
 npm init --yes
 ```
-
-3. Instalar los módulos necesarios del proyecto para **"nodejs"** (recordar usar el archivo **".gitignore"** si usa git):
+### 3. Instalar los módulos en el proyecto.
+Instalar los módulos necesarios del proyecto para **"nodejs"** (recordar usar el archivo **".gitignore"** si usa git):
 ```bash
 npm i express express-handlebars express-session method-override mongoose passport passport-local bcryptjs connect-flash
 ```
-
-4. Crear un directorio en la carpeta del proyecto llamado **"src/"**, el cual tendrá todo el código tanto las vistas del "Frontend", como el código del servidor ("Backend"):
+### 4. Crear una carpeta "src/" en el proyecto
+Crear un directorio en la carpeta del proyecto llamado **"src/"**, el cual tendrá todo el código tanto las vistas del "Frontend", como el código del servidor ("Backend"):
 ```bash
 mkdir src
 cd src
 ```
-
-5. A continuación creamos dos archivos de javascript: **"index.js"** y **"database.js"**. "index.js" es el archivo principal de la aplicación web, necesario para poder correr la aplicación web. "database.js" es para configurar la conección entre la aplicación web con la base de datos, este archivo será utilizado por "index.js":
+### Crear "index.js" y "database.js"
+A continuación creamos dos archivos de javascript: **"index.js"** y **"database.js"**. "index.js" es el archivo principal de la aplicación web, necesario para poder correr la aplicación web. "database.js" es para configurar la conección entre la aplicación web con la base de datos, este archivo será utilizado por "index.js":
 ```bash
 touch index.js
 touch database.js
 ```
 
-6. Luego dentro de la carpeta "src", se crean las siguientes carpetas:
+### 6. Crear estructura de directorios del proyecto.
+Luego dentro de la carpeta "src", se crean las siguientes carpetas:
 * **config:** esta carpeta puede almacenar distintos archivos que contengan variables de configuración.
 * **helpers:** donde se almacenan funciones que el servidor podrá utilizar.
 * **models:** donde se define como van a lucir los datos que deseamos almacenar dentro de la base de datos.
