@@ -410,6 +410,7 @@ Modificaremos la plantilla de "express-handlebars", que anteriormente llamamos: 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SimpleWebApp</title>
     <!-- Enlace CSS desde la CDN de BOOTSTRAP 4 -->
+    <!-- CSS Personalizado-->
 
 </head>
 
@@ -468,6 +469,7 @@ Para cargar el CSS desde en CDN de Bootstrap, inserte el enlace de referencia en
     <title>SimpleWebApp</title>
     <!-- Enlace CSS desde la CDN de BOOTSTRAP 4 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- CSS Personalizado-->
 
 </head>
 
@@ -482,3 +484,4 @@ Para cargar el CSS desde en CDN de Bootstrap, inserte el enlace de referencia en
 
 </html>
 ```
+ 
