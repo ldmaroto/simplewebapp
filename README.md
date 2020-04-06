@@ -485,3 +485,84 @@ Para cargar el CSS desde en CDN de Bootstrap, inserte el enlace de referencia en
 </html>
 ```
  
+ ### 5. Dando contenido a los archivos: "index.hbs" y "about.hbs"
+ Aca se puede dar camino a la imaginación.
+
+ ```html
+ <div class="jumbotron mt-4">
+    <h1 class="display-4">Simple Web App & MongoDB</h1>
+    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <hr class="my-4">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quis accusamus quo exercitationem quas error,
+        corporis labore earum debitis ducimus eius maiores, sint quidem suscipit magnam, quisquam distinctio minima.
+        Fugiat.
+    </p>
+    <a href="https://ldmaroto.github.io/simplewebapp/" class="btn btn-primary btn-lg">GitHub Repository</a>
+</div>
+ ```
+
+ ```html
+<div class="card">
+    <div class="card-body">
+        <h1>About</h1>
+        <hr class="my-4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, neque ex. Perferendis eos reiciendis id
+            iure nam esse adipisci nulla neque maxime incidunt aut, quas, officia dolor fugiat vero nobis recusandae
+            deleniti distinctio delectus placeat ipsam fuga, voluptas sapiente dolorum!</p>
+    </div>
+</div>
+ ```
+
+ ### 6. Creando estilos CSS personalizados
+En la carpeta "src/public/", se debe crear un carpeta llamada "css" y dentro de ella un archivos llamado "main.css"
+
+```bash
+$ mkdir css
+$ cd css
+$ touch main.css
+```
+
+En el archivo "main.css", escriba el contenido del estilo del body. Puede utilizar la referencia de: https://uigradients.com/#Titanium:
+
+```css
+body {
+    background: #283048;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #859398, #283048);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #859398, #283048);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+```
+
+Por último, en el archivo "main.hbs", hay que cargar el estilo personalizado, agregando la linea de referencia:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleWebApp</title>
+    <!-- Enlace CSS desde la CDN de BOOTSTRAP 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <p>Barra de Navegación</p>
+
+    <main class="container">
+        <!-- {{{ body }}} Sintaxis de "express-handlebars", contenido de los archivos ".hbs" -->
+        {{{ body }}}
+    </main>
+
+    <p>Footer</p>
+</body>
+
+</html>
+```
