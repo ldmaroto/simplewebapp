@@ -25,7 +25,7 @@ Para este proyecto, utilizaremos los siguientes módulos de **"nodejs"**, los cu
 * **bcryptjs:** es un módulo de cifrado de contraseñas, para aplicar un algoritmo a un determinado texto y convertirlo en un hash.
 * **connect-flash:** es un módulo para poder enviar mensajes entre multiples vistas, como: advertencias, errores, avisos, etc. 
 
-## Pasos para crear la carpeta del proyecto
+## II. Pasos para crear la carpeta del proyecto
 
 1. Crear en la terminal un directorio, en este caso se llamará **"simplewebapp"**:
 ```bash
@@ -67,7 +67,7 @@ touch database.js
 mkdir config helpers models public routes views
 ```
 
-## Creación del Backend
+## III. Creación del Backend
 Comensamos editando el archivo: **"index.js"**. Este archivo se dividirá en secciones para hacerlo más simple de leer:
 
 * **SEC: Initializations:** donde se inicializa los módulos.
