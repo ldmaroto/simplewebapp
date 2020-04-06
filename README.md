@@ -266,3 +266,24 @@ En la sección "Static Files" del archivo "index.js" de la carpete "src/", se de
 // SEC: Static Files
 app.use(express.static(path.join(__dirname, 'public')));
 ```
+
+Antes de finalizar la configuración del "Backend", seguidamente se prepara la conección entre la aplicación web con la base de datos. Recordar que "mongoose" no es la base de datos, es el módulo que nos permite unir express con una base de datos de "MongoBD". Es necesario instalar el servidor "MongoDB". Puede seguir este tutorial: https://www.youtube.com/watch?v=2KMQdqDk9e8. 
+
+En el archivo "database.js" debe crear las siguientes sentencias:
+
+```javascript
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/notesdb', {
+        useCreateIndex: true,
+        useNewUrlParser: true,
+        useFindAndModify: false
+    }).then(db => console.log('DB is connected'))
+    .catch(err => console.error(err));
+```
+
+En el archivo "index.js", en la sección de inicialización, se requiere inicializar la basa de datos:
+
+```javascript
+// SEC: Initializations
+require('./database');
+```
